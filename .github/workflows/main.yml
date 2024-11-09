@@ -1,5 +1,4 @@
 name: Deploy to Render
-
    on:
      push:
        branches:
@@ -29,7 +28,5 @@ name: Deploy to Render
          run: pip install pytest
 
        - name: Deploy to Render
-         if: success()
-         env:
          run: |
            curl -X POST "https://api.render.com/deploy/srv-csnbg05ds78s7392g1fg?key=kKutJ03wLfY" -H "Content-Type: application/json" -d '{}'
